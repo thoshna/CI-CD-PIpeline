@@ -28,9 +28,8 @@ jobs:
 
     - name: Deploy to Heroku
       if: success()
-      env:
+      uses: thoshna/ci-cd-pipeline@v3.12.12
+      with:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
         heroku_app_name: "flask-mypy"
-      run:
-        git remote add heroku https://git.heroku.com/flask-mypy.git
-        git push heroku HEAD:main -f
+        heroku_email: "thoshnadevice@gmail.com"

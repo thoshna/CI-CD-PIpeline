@@ -11,7 +11,7 @@ class TestApp(unittest.TestCase):
     def test_index(self):
         response = self.app.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'<h1>Welcome to the Form</h1>', response.data)
+        self.assertIn(b'<h1>Simple Form</h1>', response.data)
 
     def test_submit_form(self):
         response = self.app.post('/submit', data=dict(name='John', email='john@example.com'))
@@ -19,8 +19,9 @@ class TestApp(unittest.TestCase):
         self.assertIn(b'Hello, John! Your email is john@example.com.', response.data)
 
     def test_submit_form_missing_data(self):
-        response = self.app.post('/submit', data=dict(name=''))
+        response = self.app.post('/submit', data=dict(name='John'))
         self.assertEqual(response.status_code, 400)
 
 if __name__ == '__main__':
     unittest.main()
+

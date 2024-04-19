@@ -28,10 +28,8 @@ jobs:
 
     - name: Deploy to Heroku
       if: success()
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        HEROKU_APP_NAME: "flask-mypy"
-        HEROKU_EMAIL: "thoshnadevice@gmail.com"
-      run: |
-        heroku login --email $HEROKU_EMAIL --password $HEROKU_API_KEY
-        git push https://git.heroku.com/$HEROKU_APP_NAME.git HEAD:main
+      uses: akhileshns/heroku-deploy@v3.12.12
+      with:
+        heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+        heroku_app_name: "your-heroku-app-name"
+        heroku_email: "your-email@example.com"

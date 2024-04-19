@@ -28,7 +28,7 @@ jobs:
 
     - name: Deploy to Heroku
       if: success()
-      uses: thoshna/CI-CD-Pipeline@v2
+      uses: thoshna/ci-cd-pipeline@v2
       continue-on-error: true
       with:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}

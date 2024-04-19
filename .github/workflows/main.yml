@@ -28,8 +28,8 @@ jobs:
 
     - name: Deploy to Heroku
       if: success()
-      uses: akhileshns/heroku-deploy@v3.12.12
+      uses: thoshna/ci-cd-pipeline@v3.12.12
       with:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-        heroku_app_name: "your-heroku-app-name"
-        heroku_email: "your-email@example.com"
+        heroku_app_name: "flask-mypy"
+        heroku_email: "thoshnadevice@gmail.con"

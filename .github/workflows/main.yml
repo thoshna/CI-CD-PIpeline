@@ -28,8 +28,9 @@ jobs:
 
     - name: Deploy to Heroku
       if: success()
-      uses: thoshna/ci-cd-pipeline@v2.44.0
-      continue-on-error: true
-      with:
+      env:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
         heroku_app_name: "flask-mypy"
+        run:
+          git remote add heroku https://heroku:$HEROKU_API_KEY@git.heroku.com/flask-mypy.git
+          git push heroku HEAD:main -f

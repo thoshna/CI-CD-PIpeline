@@ -28,9 +28,12 @@ jobs:
 
     - name: Deploy to Heroku
       if: success()
-      uses: thoshna/CI-CD-PIpeline@v3.12.12
-      with:
-        heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+      run: |
+        echo "Deploying to Heroku..."
+        curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+        heroku container:login
+        heroku container:push web -a flask-mypy
+        heroku container:release web -a flask-mypy
         heroku_app_name: "flask-mypy"
         heroku_email: "thoshnadevice@gmail.com"
 

@@ -72,4 +72,11 @@ HEROKU_API_KEY: API key for Heroku.
 HEROKU_EMAIL: Email associated with your Heroku account.
 
 **Create the Workflow File**:
-Create a new file named .github/workflows/main.yml in the root directory of your repository 
+Create a new file named .github/workflows/main.yml in the root directory of your repository.
+
+**Commit Changes**:
+Commit and push the changes to your repository to trigger the CI/CD pipeline.
+
+**Note**: Ensure that your web application is compatible with the deployment environment (e.g., Heroku), and the necessary dependencies are listed in the requirements.txt file.
+
+By following these steps, you can run the web application locally and set up the CI/CD pipeline for automated testing and deployment using GitHub Actions.

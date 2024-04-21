@@ -28,7 +28,7 @@ jobs:
 
     - name: Deploy to Heroku
       if: success()
-      uses: thoshna/CI-CD-PIpeline@v3.12.12
+      uses: thoshna/CI-CD-PIpeline@v1.0.0
       with:
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
         heroku_app_name: "flask-mypy"

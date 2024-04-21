@@ -60,23 +60,23 @@ The CI/CD pipeline workflow is defined in the `.github/workflows/main.yml` file 
 
 The CI/CD pipeline is automated using GitHub Actions. Here's how to set it up:
 
-**Fork the Repository**:
+-**Fork the Repository**:
 Fork the repository containing the web application code to your GitHub account.
 
-**Enable GitHub Actions**:
+-**Enable GitHub Actions**:
 GitHub Actions should be enabled by default in your forked repository. If not, go to the "Actions" tab in your repository and enable it.
 
-**Configure Secrets**:
+-**Configure Secrets**:
 Configure the following secrets in your repository settings:
 HEROKU_API_KEY: API key for Heroku.
 HEROKU_EMAIL: Email associated with your Heroku account.
 
-**Create the Workflow File**:
+-**Create the Workflow File**:
 Create a new file named .github/workflows/main.yml in the root directory of your repository.
 
-**Commit Changes**:
+-**Commit Changes**:
 Commit and push the changes to your repository to trigger the CI/CD pipeline.
 
-**Note**: Ensure that your web application is compatible with the deployment environment (e.g., Heroku), and the necessary dependencies are listed in the requirements.txt file.
+-**Note**: Ensure that your web application is compatible with the deployment environment (e.g., Heroku), and the necessary dependencies are listed in the requirements.txt file.
 
 By following these steps, you can run the web application locally and set up the CI/CD pipeline for automated testing and deployment using GitHub Actions.

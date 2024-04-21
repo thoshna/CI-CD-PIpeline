@@ -28,8 +28,9 @@ jobs:
 
     - name: Deploy to Heroku
       if: success()
-      uses: thoshna/CI-CD-PIpeline@v3.12.12
+      uses: action/checkout@v3
       with:
+        default: ${{github.repository}}
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
         heroku_app_name: "flask-mypy"
         heroku_email: "thoshnadevice@gmail.com"

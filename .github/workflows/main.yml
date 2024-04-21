@@ -34,4 +34,4 @@ jobs:
         usedocker: true
         heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
         heroku_app_name: "flask-mypy"
-        heroku_email: "thoshnadevice@gmail.con"
+        heroku_email: "thoshnadevice@gmail.com"
